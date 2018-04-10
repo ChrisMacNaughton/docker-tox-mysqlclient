@@ -1,5 +1,5 @@
-FROM themattrix/tox
+FROM themattrix/tox-base
 
 RUN apt-get update && apt-get install -y \
-    libmysqlclient \
- && rm -rf /var/lib/apt/lists/*
+    libmysqlclient-dev \
+ && apt-get clean ** && rm -rf /var/lib/apt/lists/*
